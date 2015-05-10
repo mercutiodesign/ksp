@@ -80,7 +80,7 @@ class MissionForm
     $('#shortestTimeOfFlight,#longestTimeOfFlight').change (event) ->
       setTimeOfFlight(+$('#shortestTimeOfFlight').val(), +$('#longestTimeOfFlight').val(), event.target.id == 'shortestTimeOfFlight')
     
-    @form.bind 'reset', (event) => setTimeout((=> setOrigin('Kerbin'); setDestination('Duna')), 0)
+    @form.bind 'reset', (event) => setTimeout((=> @setOrigin('Kerbin'); @setDestination('Duna')), 0)
     @form.submit ((event) => event.preventDefault(); $(@).trigger('submit'))
   
   origin: ->

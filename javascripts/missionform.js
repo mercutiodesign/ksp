@@ -141,8 +141,8 @@
       this.form.bind('reset', (function(_this) {
         return function(event) {
           return setTimeout((function() {
-            setOrigin('Kerbin');
-            return setDestination('Duna');
+            _this.setOrigin('Kerbin');
+            return _this.setDestination('Duna');
           }), 0);
         };
       })(this));
